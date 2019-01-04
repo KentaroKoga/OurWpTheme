@@ -1,0 +1,12 @@
+.frontPageHeader {
+  background: url('./assets/img/frontPage/frontPageHero.jpg');
+  background-size: cover;
+  background-position: center;
+  &_wrapper {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

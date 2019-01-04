@@ -8,16 +8,39 @@
 <?php wp_head(); ?>
 </head>
 <body>
+<?php
+  $logo = get_custom_logo();
+?>
 
 <header class="header">
   <div class="header_wrapper">
     <?php if ( is_front_page() ) :?>
       <h1 class="siteTitle">
-        <?php the_custom_logo(); ?>
+      <?php
+        if ( $logo ):
+          the_custom_logo();
+        else:
+      ?>
+        <a href="<?= esc_url( home_url('/') ) ?>">
+          <?php bloginfo('name'); ?>
+        </a>
+      <?php
+        endif;
+      ?>
       </h1>
     <?php else : ?>
       <p class="siteTitle">
-        <?php the_custom_logo(); ?>
+      <?php
+        if ( $logo ):
+          the_custom_logo();
+        else:
+      ?>
+        <a href="<?= esc_url( home_url('/') ) ?>">
+          <?php bloginfo('name'); ?>
+        </a>
+      <?php
+        endif;
+      ?>
       </p>
     <?php endif ; ?>
 

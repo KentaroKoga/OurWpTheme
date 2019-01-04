@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/app.scss */ \"./dev/scss/app.scss\");\n/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_app_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./dev/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/app.scss */ \"./dev/scss/app.scss\");\n/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_app_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_toggleMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/toggleMenu */ \"./dev/js/toggleMenu.js\");\n\n\nObject(_js_toggleMenu__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack:///./dev/index.js?");
+
+/***/ }),
+
+/***/ "./dev/js/toggleMenu.js":
+/*!******************************!*\
+  !*** ./dev/js/toggleMenu.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var spNav = document.getElementsByClassName('headerSpNav')[0];\n  var btn = document.getElementById('menuToggle');\n  btn.addEventListener('click', function () {\n    if (spNav.classList.contains('active')) {\n      spNav.className = 'headerSpNav';\n    } else {\n      spNav.className = 'headerSpNav active';\n    }\n\n    if (btn.classList.contains('active')) {\n      btn.className = 'headerSpNav_btn';\n    } else {\n      btn.className = 'headerSpNav_btn active';\n    }\n  });\n});\n\n//# sourceURL=webpack:///./dev/js/toggleMenu.js?");
 
 /***/ }),
 

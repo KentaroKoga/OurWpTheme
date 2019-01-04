@@ -1,8 +1,8 @@
-
 .header {
   background: $bgColor;
   &_wrapper {
     max-width: $maxwidth;
+    padding: 10px 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -26,3 +26,64 @@
   display: none;
 }
 
+
+
+
+// タブレット
+@media screen and (max-width: 768px) {
+  .header {
+    &_wrapper {
+      padding: 10px;
+    }
+  }
+
+  .headerPcNav {
+    display: none;
+  }
+
+  .headerSpNav {
+    position: relative;
+    display: block;
+    nav {
+      display: none;
+    }
+    &_btn {
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        height: 2px;
+        width: 25px;
+        background: #333;
+        display: block;
+        transition: all .4s ease-out;
+      }
+      &.active {
+        justify-content: center;
+        span {
+          transform-origin: center;
+          &:nth-of-type(1) {
+            transform: rotate(-405deg) translate(-1px, 2px);
+          }
+          &:nth-of-type(2) {
+            transform: translate(200%, 0);
+            opacity: 0;
+          }
+          &:nth-of-type(3) {
+            transform: rotate(405deg) translate(-1px, -2px);
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+// スマホ
+@media screen and (max-width: 480px) {
+
+}

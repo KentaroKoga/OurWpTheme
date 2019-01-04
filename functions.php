@@ -42,7 +42,7 @@ add_action( 'widgets_init', 'fump_widgets_init' );
 // css・jsの読み込み
 function fump_theme_scripts() {
   wp_enqueue_style( 'fump-style', get_stylesheet_uri() );
-  wp_enqueue_script( 'fump-main', get_stylesheet_uri() . 'assets/js/main.js', array(), false, true );
+  wp_enqueue_script( 'fump-main', get_template_directory_uri() . '/assets/js/main.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'fump_theme_scripts' );
 
