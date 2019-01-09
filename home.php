@@ -1,6 +1,5 @@
 <?php
   get_header();
-  get_template_part( 'breadcrumb' );
 ?>
 
 <?php
@@ -14,6 +13,10 @@ if ( have_posts() ) :
         <h1 class="pageHeader_title"><?php single_post_title(); ?></h1>
       </div>
     </header>
+
+    <?php get_template_part( 'breadcrumb' ); ?>
+
+    <div class="entryContainer">
     <?php
   endif;
 
@@ -22,20 +25,23 @@ if ( have_posts() ) :
     ?>
 
     <article id="<?php the_ID(); ?>" class="entry">
+      <?php post_thumbnail(); ?>
       <header>
-        <h2>
+        <h2 class="entry_title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h2>
         <?php posted_on(); ?>
         <?php posted_by(); ?>
       </header>
-
-      <?php post_thumbnail(); ?>
     </article>
 
     <?php
     endwhile;
+    ?>
 
+    </div><!--entryContainer-->
+
+    <?php
     the_posts_pagination( array(
       'prev_text' => 'PREV',
       'next_text' => 'NEXT'

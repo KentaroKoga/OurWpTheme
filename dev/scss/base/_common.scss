@@ -5,5 +5,55 @@ $mainColor: #a953a8;
 $maxwidth: 980px;
 
 a {
+  color: $txtColor;
   text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px;
+  font-size: 14px;
+  li {
+    & + li {
+      margin: 0 0 0 4px;
+    }
+  }
+}
+
+.pageHeader {
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    h1 {
+      font-size: 48px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
 }
