@@ -1,6 +1,6 @@
 .entryContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template: auto / repeat(3, 1fr);
   grid-gap: 15px;
   padding: 0 15px;
   article {
@@ -17,7 +17,7 @@
 @media screen and (max-width: 768px) {
 
   .entryContainer {
-    grid-template-columns: 1fr;
+    grid-template: auto / 1fr;
     grid-gap: 0;
   }
   .entry {
