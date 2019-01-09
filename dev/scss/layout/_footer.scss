@@ -1,0 +1,24 @@
+.footer {
+  background: #f8f8f8;
+  &_wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  &_menu {
+    ul {
+      display: flex;
+      align-items: center;
+    }
+    a {
+      display: block;
+      padding: 10px;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}

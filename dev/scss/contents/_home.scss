@@ -1,0 +1,30 @@
+.entryContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  padding: 0 15px;
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .entryContainer {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .entry {
+    margin: 30px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+}
