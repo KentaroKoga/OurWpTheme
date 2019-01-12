@@ -25,6 +25,7 @@
   margin: 0 auto;
   &_title {
     text-align: center;
+    margin-bottom: 30px;
     &-l {
       font-size: 36px;
     }
@@ -36,7 +37,6 @@
     display: grid;
     grid-template: auto / repeat(3, 1fr);
     grid-gap: 15px;
-    margin: 30px 0;
   }
 }
 
@@ -51,14 +51,26 @@
     &_posts {
       grid-template: auto / 1fr;
       grid-gap: 0;
-      padding: 15px;
-    }
-    &_post {
-      margin: 30px 0;
+      padding: 0 15px;
     }
   }
 }
 
 @media screen and (max-width: 480px) {
+  .frontPageHeader {
+    &_title {
+      font-size: 48px;
+    }
+    &_subtitle {
+      font-size: 16px;
+    }
+  }
+
+  .frontNewsEntry {
+    margin-bottom: 32px;
+    &_title {
+      font-size: 18px;
+    }
+  }
 
 }

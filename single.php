@@ -1,6 +1,5 @@
 <?php
   get_header();
-  get_template_part( 'breadcrumb' );
 ?>
 
 <?php
@@ -9,18 +8,25 @@
       the_post();
 ?>
 
-  <header class="singleHeader">
-    <?php posted_on(); ?>
-    <?php posted_by(); ?>
-    <h1 class="singleHeader_title"><?php the_title(); ?></h1>
-    <p class="catList"><?php category_list(); ?></p>
-    <?php post_thumbnail(); ?>
+  <header class="singleHero">
+    <?php fump_post_thumbnail(); ?>
   </header>
+  <?php get_template_part( 'breadcrumb' ); ?>
 
   <section class="singleContent">
-    <?php
-      the_content() ;
-    ?>
+    <div class="singleContent_wrapper">
+      <div class="singleHeader">
+        <div class="singleHeader_meta">
+          <?php posted_on(); ?>
+          <?php posted_by(); ?>
+        </div>
+        <h1 class="singleHeader_title"><?php the_title(); ?></h1>
+        <p class="catList"><?php fump_category_list(); ?></p>
+      </div>
+      <?php
+        the_content() ;
+      ?>
+    </div>
   </section>
 
   <?php
@@ -39,5 +45,4 @@
 </main>
 
 <?
-	get_sidebar();
 	get_footer();

@@ -46,8 +46,8 @@ endif;
 
 
 // サムネイルの表示
-if ( ! function_exists( 'post_thumbnail' ) ) :
-  function post_thumbnail() {
+if ( ! function_exists( 'fump_post_thumbnail' ) ) :
+  function fump_post_thumbnail() {
     if ( post_password_required() || is_attachment() ) {
     	return;
     }
