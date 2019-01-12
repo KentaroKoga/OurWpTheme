@@ -47,7 +47,7 @@ function fump_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'fump_theme_scripts' );
 
 
-function category_list () {
+function fump_category_list () {
   $categorys = get_the_category();
   foreach ( $categorys as $category ) {
     echo "<a href='" . esc_url( get_category_link($category->term_id) ) .  "' ";
@@ -57,7 +57,7 @@ function category_list () {
   }
 }
 
-function aritcle_id () {
+function fump_aritcle_id () {
   $id = get_the_id();
   $slug = get_post( $id )->post_name;
   if ( empty($slug) ) {

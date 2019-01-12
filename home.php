@@ -25,7 +25,7 @@ if ( have_posts() ) :
     ?>
 
     <article id="<?php the_ID(); ?>" class="entry">
-      <?php post_thumbnail(); ?>
+      <?php fump_post_thumbnail(); ?>
       <header>
         <h2 class="entry_title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

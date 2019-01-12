@@ -24,7 +24,7 @@ if ( have_posts() ) :
         <?php posted_by(); ?>
       </header>
 
-      <?php post_thumbnail(); ?>
+      <?php fump_post_thumbnail(); ?>
     </article>
 
     <?php

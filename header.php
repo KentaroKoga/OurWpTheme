@@ -52,4 +52,4 @@
 
 <div class="container">
   <main id="main">
-    <article id="<?php aritcle_id() ?>">
+    <article id="<?php fump_aritcle_id() ?>">

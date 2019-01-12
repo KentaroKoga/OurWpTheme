@@ -23,18 +23,17 @@
             $posts = get_posts( $args );
             foreach ( $posts as $post ):
             setup_postdata( $post );
-            $cats = get_the_category( $post );
-            $catUrl = get_category_link($cats[0]->term_id);
-            $catName = $cats[0]->name;
           ?>
-          <div class="frontNews_post">
-            <a href="<?php the_permalink(); ?>"><?php post_thumbnail(); ?></a>
-            <span class="frontNews_post-info">
-              <time class="frontNews_post-date"><?= get_the_date(); ?></time>
-              <a href="<?= esc_url( $catUrl ); ?>" class="frontNews_post-cat"><?= esc_html( $catName ); ?></a>
+          <article class="frontNewsEntry">
+            <a href="<?php the_permalink(); ?>"><?php fump_post_thumbnail(); ?></a>
+            <span class="frontNewsEntry_meta">
+              <?php posted_on(); ?>
+              <?php fump_category_list(); ?>
             </span>
-            <a href="<?php the_permalink(); ?>"><h2 class="frontNews_post-title"><?php the_title(); ?></h2></a>
-          </div>
+            <h2 class="frontNewsEntry_title">
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h2>
+          </article>
           <?php
             endforeach;
             wp_reset_postdata();

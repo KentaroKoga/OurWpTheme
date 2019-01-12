@@ -81,6 +81,9 @@
       }
       &.active {
         justify-content: center;
+        position: fixed;
+        right: 15px;
+        top: 15px;
         span {
           transform-origin: center;
           &:nth-of-type(1) {

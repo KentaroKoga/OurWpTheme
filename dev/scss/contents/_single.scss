@@ -1,0 +1,22 @@
+.singleContent {
+  padding: 30px 0;
+  background: $bgColor;
+  &_wrapper {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 30px 10px;
+    background: #fff;
+  }
+}
+
+.singleHeader {
+  &_meta {
+    margin: 0 0 10px 0;
+    .date, .author {
+      display: block;
+    }
+  }
+  &_title {
+    font-size: 40px;
+  }
+}
