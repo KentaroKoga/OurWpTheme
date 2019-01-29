@@ -1,6 +1,5 @@
 <?php
   get_header();
-  get_template_part( 'breadcrumb' );
 ?>
 
   <?php
@@ -14,8 +13,12 @@
       </div>
     </header>
 
+    <?php get_template_part( 'breadcrumb' ); ?>
+
     <section class="pageContent">
-      <?php the_content(); ?>
+      <div class="pageContent_wrapper">
+        <?php the_content(); ?>
+      </div>
     </section>
 
     <?php
@@ -34,5 +37,4 @@
 </main>
 
 <?php
-	get_sidebar();
 	get_footer();

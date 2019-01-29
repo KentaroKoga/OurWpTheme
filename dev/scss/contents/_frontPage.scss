@@ -21,7 +21,7 @@
 
 .frontNews {
   padding: 30px 0;
-  max-width: $maxwidth;
+  max-width: $maxWidth;
   margin: 0 auto;
   &_title {
     text-align: center;
@@ -34,9 +34,12 @@
     }
   }
   &_posts {
-    display: grid;
-    grid-template: auto / repeat(3, 1fr);
-    grid-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    article {
+      width: calc(33% - 20px);
+    }
   }
 }
 
@@ -49,9 +52,10 @@
 
   .frontNews {
     &_posts {
-      grid-template: auto / 1fr;
-      grid-gap: 0;
-      padding: 0 15px;
+      article {
+        margin: 0 0 30px 0;
+        width: calc(50% - 20px);
+      }
     }
   }
 }
@@ -70,6 +74,16 @@
     margin-bottom: 32px;
     &_title {
       font-size: 18px;
+    }
+  }
+
+  .frontNews {
+    &_posts {
+      flex-direction: column;
+      align-items: center;
+      article {
+        width: 100%;
+      }
     }
   }
 

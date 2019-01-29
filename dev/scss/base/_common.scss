@@ -2,7 +2,7 @@ $bgColor: #f8f8f8;
 $txtColor: #333;
 $mainColor: #a953a8;
 
-$maxwidth: 980px;
+$maxWidth: 980px;
 
 a {
   color: $txtColor;
@@ -20,40 +20,44 @@ img {
 }
 
 .breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 15px;
-  font-size: 14px;
-  li {
-    & + li {
-      margin: 0 0 0 4px;
-    }
-  }
-}
-
-.pageHeader {
   &_wrapper {
+    max-width: $maxWidth;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    height: 160px;
-    h1 {
-      font-size: 48px;
+    padding: 15px 0;
+    font-size: 14px;
+    li {
+      & + li {
+        margin: 0 0 0 4px;
+      }
     }
   }
 }
 
 
 
-@media screen and (max-width: 1280px) {
-
+@media screen and (max-width: $maxWidth) {
+  .breadcrumb {
+    &_wrapper {
+      padding: 15px 50px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-
+  .breadcrumb {
+    &_wrapper {
+      padding: 15px 30px;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
-
+  .breadcrumb {
+    &_wrapper {
+      padding: 15px;
+    }
+  }
 }
