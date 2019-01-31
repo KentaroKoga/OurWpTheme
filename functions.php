@@ -50,10 +50,12 @@ add_action( 'wp_enqueue_scripts', 'fump_theme_scripts' );
 function fump_category_list () {
   $categorys = get_the_category();
   foreach ( $categorys as $category ) {
+    echo "<span class='catList'>";
     echo "<a href='" . esc_url( get_category_link($category->term_id) ) .  "' ";
     echo "class='catList_" . esc_html( $category->slug ) . "'>";
     echo esc_html( $category->name );
     echo "</a>";
+    echo "</span>";
   }
 }
 
