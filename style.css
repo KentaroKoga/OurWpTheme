@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP);
 @charset "UTF-8";
 /*
 Theme Name: Fump
@@ -246,6 +247,13 @@ audio, canvas, progress, video {
   text-shadow: none;
 }
 
+body {
+  color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+}
+
 a {
   color: #333;
   text-decoration: none;
@@ -261,6 +269,7 @@ img {
   width: 100%;
 }
 
+/*---- search form -----*/
 .searchform input[type="text"] {
   padding: 8px 10px;
   border: 1px solid #aaa;
@@ -281,6 +290,47 @@ img {
   border: 1px solid #ccc;
 }
 
+/*----- 目次 -----*/
+.toc {
+  margin: 0 0 50px 0;
+  padding: 20px 40px;
+  background: #f8f8f8;
+  position: relative;
+  z-index: 20;
+}
+
+.toc_title {
+  padding: 0 0 15px 0;
+  border-bottom: .5px solid #ccc;
+  text-align: center;
+}
+
+.toc ol {
+  margin: 15px 0;
+  counter-reset: item;
+  list-style-type: none;
+}
+
+.toc li {
+  padding: 0 0 10px 20px;
+  position: relative;
+}
+
+.toc li::before {
+  counter-increment: item;
+  content: counter(item, decimal-leading-zero);
+  height: 100%;
+  color: #aaa;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.toc li a {
+  margin: 0 0 0 25px;
+  display: inline-block;
+}
+
 .breadcrumb_wrapper {
   max-width: 980px;
   margin: 0 auto;
@@ -293,6 +343,24 @@ img {
 
 .breadcrumb_wrapper li + li {
   margin: 0 0 0 4px;
+}
+
+.entryMeta {
+  margin-bottom: 15px;
+}
+
+.entryMeta_row {
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.catList a {
+  padding: 8px 10px;
+  color: #555;
+  background: #ccc;
+  border-radius: 2px;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 980px) {
@@ -318,9 +386,7 @@ img {
 }
 
 .header_wrapper {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 10px 0;
+  padding: 15px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -430,12 +496,18 @@ img {
   .header_wrapper {
     padding: 10px 15px;
   }
+  .headerSpNav_btn {
+    height: 15px;
+  }
   .headerSpNav_btn span {
     height: 2px;
     width: 25px;
   }
   .headerSpNav_btn.active {
     right: 15px;
+  }
+  .siteTitle {
+    font-size: 24px;
   }
 }
 
@@ -631,19 +703,31 @@ img {
 }
 
 .singleContent {
-  padding: 30px 0;
+  padding: 70px 0;
   background: #f8f8f8;
 }
 
 .singleContent_wrapper {
-  max-width: 780px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 30px 10px;
   background: #fff;
+  padding: 30px 15px;
+}
+
+.singleContent_wrapper h2, .singleContent_wrapper h3 {
+  margin: 50px 0 20px;
+}
+
+.singleContent_wrapper p {
+  margin: 0 0 1.8em 0;
+}
+
+.singleHeader {
+  margin: 0 0 30px 0;
 }
 
 .singleHeader_meta {
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
 }
 
 .singleHeader_meta .date, .singleHeader_meta .author {
@@ -651,7 +735,37 @@ img {
 }
 
 .singleHeader_title {
-  font-size: 40px;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 980px) {
+  .singleContent {
+    padding: 50px;
+  }
+  .singleContent_wrapper {
+    padding: 40px;
+  }
+  .singleHeader_title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .singleContent {
+    padding: 50px 30px;
+  }
+  .singleContent_wrapper {
+    padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .singleContent {
+    padding: 50px 15px;
+  }
+  .singleHeader_title {
+    font-size: 26px;
+  }
 }
 
 .pageHeader {
