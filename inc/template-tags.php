@@ -68,7 +68,7 @@ if ( ! function_exists( 'fump_post_thumbnail' ) ) :
       <?php if(has_post_thumbnail()): ?>
         <?php the_post_thumbnail(); ?>
       <?php else: ?>
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/sample.png" alt="no-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample.png" alt="no-image">
       <?php endif; ?>
     </a>
 
