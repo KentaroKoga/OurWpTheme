@@ -1,4 +1,6 @@
-$bgColor: #f8f8f8;
+$headerBg: #fff;
+$pageHeaderBg: #f8f8f8;
+$mainBg: #f8f8f8;
 $txtColor: #333;
 $mainColor: #a953a8;
 
@@ -17,6 +19,29 @@ ul {
 img {
   height: auto;
   width: 100%;
+}
+
+.searchform{
+  input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+  }
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+#searchsubmit {
+  padding: 8px 10px;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+
 }
 
 .breadcrumb {

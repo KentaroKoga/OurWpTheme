@@ -52,7 +52,7 @@ if ( ! function_exists( 'fump_post_thumbnail' ) ) :
     	return;
     }
 
-    if ( is_singular() ) :
+    if ( !is_front_page() ) :
       if( !has_post_thumbnail() ) :
         return;
       else:
@@ -68,7 +68,7 @@ if ( ! function_exists( 'fump_post_thumbnail' ) ) :
       <?php if(has_post_thumbnail()): ?>
         <?php the_post_thumbnail(); ?>
       <?php else: ?>
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/sample.png" alt="no-image"></a>
+        <img src="<?= get_template_directory_uri(); ?>/assets/img/sample.png" alt="no-image">
       <?php endif; ?>
     </a>
 

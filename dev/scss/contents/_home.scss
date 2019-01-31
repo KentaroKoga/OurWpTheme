@@ -1,11 +1,9 @@
 .entryContainer {
-  background: #f8f8f8;
+  background: $mainBg;
   padding: 90px 0;
   &_wrapper {
-    padding: 80px;
-    background: #fff;
-    max-width: $maxWidth;
-    margin: 0 auto;
+    padding: 40px;
+    @include boxSet;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -24,19 +22,22 @@
     &_wrapper {
       padding: 40px;
     }
+    article {
+      width: calc(50% - 20px);
+    }
   }
 }
 
-@media screen and (max-width: 1280px) {
-
-}
 
 @media screen and (max-width: 768px) {
 
   .entryContainer {
     padding: 50px 30px;
+    &_wrapper {
+      padding: 30px 15px;
+    }
     article {
-      width: calc(50% - 20px);
+      width: 100%;
     }
   }
   .entry {
@@ -46,6 +47,7 @@
 
 @media screen and (max-width: 480px) {
   .entryContainer {
+    padding: 50px 15px;
     flex-direction: column;
     align-items: center;
     article {
