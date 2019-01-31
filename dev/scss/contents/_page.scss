@@ -1,5 +1,5 @@
 .pageHeader {
-  background: #f8f8f8;
+  background: $pageHeaderBg;
   &_wrapper {
     display: flex;
     justify-content: center;
@@ -12,13 +12,11 @@
 }
 
 .pageContent {
-  background: #f8f8f8;
+  background: $mainBg;
   padding: 90px 0;
   &_wrapper {
     padding: 80px;
-    max-width: $maxWidth;
-    margin: 0 auto;
-    background: #fff;
+    @include boxSet;
   }
 }
 

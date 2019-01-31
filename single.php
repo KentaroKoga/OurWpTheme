@@ -16,12 +16,15 @@
   <section class="singleContent">
     <div class="singleContent_wrapper">
       <div class="singleHeader">
-        <div class="singleHeader_meta">
-          <?php posted_on(); ?>
-          <?php posted_by(); ?>
+        <div class="entryMeta">
+          <div class="entryMeta_row">
+            <?php posted_on(); ?>
+            <?php posted_by(); ?>
+          </div>
+          <?php fump_category_list(); ?>
         </div>
         <h1 class="singleHeader_title"><?php the_title(); ?></h1>
-        <p class="catList"><?php fump_category_list(); ?></p>
+
       </div>
       <?php
         the_content() ;

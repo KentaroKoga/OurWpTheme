@@ -25,7 +25,7 @@
             setup_postdata( $post );
           ?>
           <article class="frontNewsEntry">
-            <a href="<?php the_permalink(); ?>"><?php fump_post_thumbnail(); ?></a>
+            <?php fump_post_thumbnail(); ?>
             <span class="frontNewsEntry_meta">
               <?php posted_on(); ?>
               <?php fump_category_list(); ?>

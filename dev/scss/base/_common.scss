@@ -1,8 +1,21 @@
-$bgColor: #f8f8f8;
+$headerBg: #fff;
+$pageHeaderBg: #f8f8f8;
+$mainBg: #f8f8f8;
 $txtColor: #333;
 $mainColor: #a953a8;
 
 $maxWidth: 980px;
+
+// NotoSansJP
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+$NotoSansJp: 'Noto Sans JP', sans-serif;
+
+body {
+  color: #333;
+  font-family: $NotoSansJp;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+}
 
 a {
   color: $txtColor;
@@ -17,6 +30,66 @@ ul {
 img {
   height: auto;
   width: 100%;
+}
+
+
+/*---- search form -----*/
+.searchform{
+  input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+  }
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+#searchsubmit {
+  padding: 8px 10px;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+}
+
+/*----- 目次 -----*/
+.toc {
+  margin: 0 0 50px 0;
+  padding: 20px 40px;
+  background: $mainBg;
+  position: relative;
+  z-index: 20;
+  &_title {
+    padding: 0 0 15px 0;
+    border-bottom: .5px solid #ccc;
+    text-align: center;
+  }
+  ol {
+    margin: 15px 0;
+    counter-reset: item;
+    list-style-type: none;
+  }
+  li {
+    padding: 0 0 10px 20px;
+    position: relative;
+    &::before {
+      counter-increment: item;
+      content: counter(item, decimal-leading-zero);
+      height: 100%;
+      color: #aaa;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    a {
+      margin: 0 0 0 25px;
+      display: inline-block;
+    }
+  }
 }
 
 .breadcrumb {
@@ -36,7 +109,24 @@ img {
   }
 }
 
+.entryMeta {
+  margin-bottom: 15px;
+  &_row {
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+  }
+}
 
+.catList {
+  a {
+    padding: 8px 10px;
+    color: #555;
+    background: #ccc;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+}
 
 @media screen and (max-width: $maxWidth) {
   .breadcrumb {

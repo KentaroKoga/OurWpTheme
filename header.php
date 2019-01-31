@@ -21,7 +21,7 @@
           the_custom_logo();
         else:
       ?>
-        <a href="<?= esc_url( home_url('/') ) ?>">
+        <a href="<?php echo esc_url( home_url('/') ) ?>">
           <?php bloginfo('name'); ?>
         </a>
       <?php
@@ -35,7 +35,7 @@
           the_custom_logo();
         else:
       ?>
-        <a href="<?= esc_url( home_url('/') ) ?>">
+        <a href="<?php echo esc_url( home_url('/') ) ?>">
           <?php bloginfo('name'); ?>
         </a>
       <?php
