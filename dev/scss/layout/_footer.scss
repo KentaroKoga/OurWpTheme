@@ -1,17 +1,21 @@
 .footer {
-  background: #f8f8f8;
+  background: #323232;
   &_wrapper {
-    max-width: 980px;
+    max-width: $maxWidth;
     margin: 0 auto;
+    padding: 20px 0;
   }
   &_menu {
     ul {
       display: flex;
       align-items: center;
     }
+    li + li {
+        margin: 0 0 0 15px;
+    }
     a {
+      color: #fff;
       display: block;
-      padding: 10px;
     }
   }
 }
@@ -20,5 +24,30 @@
   text-align: center;
   background: #333;
   color: #fff;
-  padding: 10px 0;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: $maxWidth) {
+  .footer {
+    &_wrapper {
+      padding: 20px 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    &_wrapper {
+      padding: 20px 30px;
+    }
+  }
+}
+
+// スマホ
+@media screen and (max-width: 480px) {
+  .footer {
+    &_wrapper {
+      padding: 20px 15px;
+    }
+  }
 }

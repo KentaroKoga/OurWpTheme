@@ -1,9 +1,9 @@
 .header {
   background: $bgColor;
   &_wrapper {
-    max-width: $maxwidth;
-    padding: 10px 15px;
+    max-width: $maxWidth;
     margin: 0 auto;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,12 +31,19 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: $maxWidth) {
+  .header {
+    &_wrapper {
+      padding: 10px 50px;
+    }
+  }
+}
 
 // タブレット
 @media screen and (max-width: 768px) {
   .header {
     &_wrapper {
-      padding: 10px;
+      padding: 10px 30px;
     }
   }
 
@@ -115,5 +122,9 @@
 
 // スマホ
 @media screen and (max-width: 480px) {
-
+  .header {
+    &_wrapper {
+      padding: 10px 15px;
+    }
+  }
 }

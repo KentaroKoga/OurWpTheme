@@ -17,6 +17,8 @@ if ( have_posts() ) :
     <?php get_template_part( 'breadcrumb' ); ?>
 
     <div class="entryContainer">
+      <div class="entryContainer_wrapper">
+
     <?php
   endif;
 
@@ -39,6 +41,7 @@ if ( have_posts() ) :
     endwhile;
     ?>
 
+      </div><!--entryContainer_wrapper-->
     </div><!--entryContainer-->
 
     <?php
